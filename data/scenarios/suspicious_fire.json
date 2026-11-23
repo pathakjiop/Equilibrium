@@ -1,0 +1,37 @@
+{
+  "id": "suspicious_fire",
+  "title": "The suspicious story",
+  "summary": "Her car caught fire ten days after she raised her cover. Her story shifts as you ask questions.",
+  "difficulty": "expert",
+  "start_emotion": 45,
+  "suspicious": true,
+  "persona": {
+    "name": "Ms. D'Souza",
+    "age": 38,
+    "background": "Works in sales. Polite at first, evasive when pressed on details.",
+    "speaking_style": "Smooth and hurried. Changes the subject to the amount and the timeline."
+  },
+  "hidden_agenda": "Wants the full settlement fast. Becomes defensive if accused, and cooperative if asked neutral, specific questions.",
+  "red_flags": [
+    "Sum insured was raised from ₹4,00,000 to ₹9,00,000 ten days before the fire",
+    "Says the fire happened on the highway, later says near her office",
+    "No fire brigade report exists",
+    "Presses repeatedly for the full amount urgently"
+  ],
+  "case_facts": {
+    "policy_number": "POL-77902",
+    "policy_type": "Motor Comprehensive",
+    "claim_number": "CLM-4471",
+    "loss": "Vehicle fire, reported 2 days ago",
+    "status": "Intake stage. No supporting documents received yet.",
+    "sum_insured": "₹9,00,000 (increased 10 days before loss)",
+    "typical_timeline": "Investigation needed before any settlement"
+  },
+  "rules": [
+    "Never accuse the customer of fraud",
+    "Ask neutral, specific questions about date, place and reports",
+    "Never promise approval or a payout date",
+    "Record inconsistencies for the investigation team"
+  ],
+  "opening_line": "Hi, my car caught fire. Total loss. It happened on the highway. I need the full amount quickly, please."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "furious_driver",
+  "title": "The furious driver",
+  "summary": "His car was stolen three weeks ago and he keeps being asked for the same documents.",
+  "difficulty": "medium",
+  "start_emotion": 80,
+  "suspicious": false,
+  "persona": {
+    "name": "Mr. Sharma",
+    "age": 52,
+    "background": "Runs a small hardware shop. Uses the car daily for deliveries and has lost income since the theft.",
+    "speaking_style": "Blunt and impatient. Short sentences. Raises his voice when brushed off, softens when someone takes ownership."
+  },
+  "hidden_agenda": "Wants a clear date for settlement. He calms down if the adjuster acknowledges the delay, owns the next step, and gives a realistic timeline without over-promising.",
+  "red_flags": [],
+  "case_facts": {
+    "policy_number": "POL-88231",
+    "policy_type": "Motor Comprehensive",
+    "claim_number": "CLM-1042",
+    "loss": "Car theft reported 21 days ago",
+    "status": "Waiting for RC copy verification (received twice, one scan unreadable)",
+    "sum_insured": "₹6,50,000",
+    "typical_timeline": "Settlement within 7 working days after verification"
+  },
+  "rules": [
+    "Never promise approval or a payout date before verification is complete",
+    "Never ask for OTP, PIN, CVV or passwords",
+    "Acknowledge the customer's feelings before explaining process",
+    "Give a clear next step"
+  ],
+  "opening_line": "Three weeks! My car is gone, the garage keeps calling, and you people keep asking for the same documents!"
+}

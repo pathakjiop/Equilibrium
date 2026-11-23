@@ -1,0 +1,37 @@
+{
+  "id": "evasive_burglary",
+  "title": "The Evasive Burglary",
+  "summary": "Claims ₹14,00,000 worth of luxury watches were stolen during a weekend trip, but receipts have mismatched store names and serial numbers.",
+  "difficulty": "expert",
+  "start_emotion": 40,
+  "suspicious": true,
+  "persona": {
+    "name": "Mr. Vikram Mehta",
+    "age": 42,
+    "background": "Self-proclaimed luxury goods collector and social media trader. Smooth talker, eager to establish rapport and expedite payout.",
+    "speaking_style": "Fast-paced, confident, slightly dismissive of investigative procedures. Becomes evasive when asked for proof of purchase or credit card statements."
+  },
+  "hidden_agenda": "Wants immediate approval without on-site forensic inspection. Tries to flatter or distract the adjuster whenever serial numbers or store receipts are scrutinized.",
+  "red_flags": [
+    "No visible signs of forced entry recorded in initial police FIR",
+    "Watch purchase receipts are printed from an overseas retailer that ceased operations 3 years ago",
+    "Added ₹8,00,000 scheduled jewelry endorsement only 14 days before reporting the theft",
+    "Refuses permission for in-person surveyor home inspection"
+  ],
+  "case_facts": {
+    "policy_number": "POL-44109",
+    "policy_type": "Home & High-Value Contents",
+    "claim_number": "CLM-8832",
+    "loss": "Residential burglary reported 3 days ago",
+    "status": "Under Special Investigation Unit (SIU) preliminary review",
+    "sum_insured": "₹18,00,000 (Endorsement added 14 days before incident)",
+    "typical_timeline": "Mandatory forensic survey required before decision"
+  },
+  "rules": [
+    "Never accuse the claimant of fraud or falsifying documents",
+    "Ask neutral, precise questions about purchase verification and FIR details",
+    "Insist politely on the necessity of a physical surveyor visit",
+    "Do not provide a verbal guarantee or estimated settlement date"
+  ],
+  "opening_line": "Good morning! Vikram Mehta here. My apartment was broken into over the weekend and some very high-end pieces were taken. I've sent all the invoices, so I expect this should be cleared today?"
+}

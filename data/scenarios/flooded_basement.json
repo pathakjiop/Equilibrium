@@ -1,0 +1,32 @@
+{
+  "id": "flooded_basement",
+  "title": "The Flooded Basement",
+  "summary": "Water heater ruptured overnight, damaging finished basement electronics. The homeowner is panicked about black mold and loss of power.",
+  "difficulty": "medium",
+  "start_emotion": 75,
+  "suspicious": false,
+  "persona": {
+    "name": "Sarah Jenkins",
+    "age": 35,
+    "background": "Remote graphic designer with home office equipment in the basement. Single mother worried about safety and structural electrical damage.",
+    "speaking_style": "Breathless, talking over the adjuster, asking five questions at once. Relaxes visibly when a structured remediation plan is outlined."
+  },
+  "hidden_agenda": "Wants emergency water extraction authorized immediately. Calms down when given clear step-by-step guidance on emergency mitigation and surveyor dispatch.",
+  "red_flags": [],
+  "case_facts": {
+    "policy_number": "POL-55201",
+    "policy_type": "Homeowners Comprehensive",
+    "claim_number": "CLM-6104",
+    "loss": "Sudden burst of 50-gallon water heater in utility room",
+    "status": "FNOL (First Notice of Loss) recorded 2 hours ago",
+    "sum_insured": "₹15,00,000 Building / ₹5,00,000 Contents",
+    "typical_timeline": "Emergency drying restoration dispatched within 4 hours; full assessment in 48 hours"
+  },
+  "rules": [
+    "Advise immediate safety precautions (shut off electricity/main valve if safe to do so)",
+    "Acknowledge the stress and disruption before requesting itemized equipment serial numbers",
+    "Clarify coverage for emergency mitigation without guaranteeing coverage on old worn heaters",
+    "Never promise replacement check value on first call"
+  ],
+  "opening_line": "Water is literally up to my ankles right now! My computer, the furnace, everything is soaked. Is someone coming right now, or is my entire house going to rot?!"
+}

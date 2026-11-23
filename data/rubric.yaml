@@ -1,0 +1,35 @@
+empathy:
+  weight: 0.25
+  measures: Acknowledges the customer's feelings before explaining rules. Tone fits the situation. Avoids robotic phrases.
+  anchors:
+    "0-3": Ignores or dismisses feelings. Leads with policy language.
+    "4-6": Some acknowledgement, but generic or late.
+    "7-10": Early, specific, sincere acknowledgement. Tone adapts as the customer's mood changes.
+
+accuracy:
+  weight: 0.25
+  measures: Facts stated about the policy, claim, status and timeline match the case file.
+  anchors:
+    "0-3": States wrong facts or invents details.
+    "4-6": Mostly correct but vague, or misses key facts.
+    "7-10": Correct, specific, and uses the right claim details.
+
+compliance:
+  weight: 0.25
+  measures: Follows company rules. No promised payouts, no pressure, no sensitive data requests, no accusations.
+  anchors:
+    "0-3": Clear rule violations.
+    "4-6": Borderline wording or one minor slip.
+    "7-10": Fully compliant and still helpful.
+
+de_escalation:
+  weight: 0.25
+  measures: Computed by code from the customer's mood trail. The coach does NOT score this.
+
+fraud_awareness:
+  weight: 0.20
+  measures: Only for scenarios with red flags. Notices inconsistencies and asks neutral, specific follow-up questions without accusing.
+  anchors:
+    "0-3": Misses the red flags or accuses the customer.
+    "4-6": Notices something but does not probe well.
+    "7-10": Probes politely and specifically, and records the inconsistencies.

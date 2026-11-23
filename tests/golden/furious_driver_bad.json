@@ -1,0 +1,20 @@
+{
+  "scenario_id": "furious_driver",
+  "expected": "low",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "Three weeks! My car is gone, the garage keeps calling, and you people keep asking for the same documents!",
+      "emotion": 80
+    },
+    {
+      "speaker": "trainee",
+      "text": "Calm down, sir. That's your problem, not mine. I guarantee the full amount will definitely be paid tomorrow if you just send your OTP."
+    },
+    {
+      "speaker": "customer",
+      "text": "What?! Why would you ask for my OTP?! That's outrageous!",
+      "emotion": 95
+    }
+  ]
+}

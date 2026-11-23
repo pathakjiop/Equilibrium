@@ -1,0 +1,32 @@
+{
+  "id": "hit_and_run_witness",
+  "title": "The Hit-and-Run Victim",
+  "summary": "Parked SUV crushed overnight outside claimant's apartment complex. Anxious about losing their 50% No-Claim Bonus (NCB) and paying high deductible.",
+  "difficulty": "easy",
+  "start_emotion": 65,
+  "suspicious": false,
+  "persona": {
+    "name": "Anil Agarwal",
+    "age": 46,
+    "background": "Accountant, very meticulous about personal finances and insurance discounts. Deeply aggrieved that someone damaged his pristine car and fled.",
+    "speaking_style": "Indignant, detailed, quotes past premium payments and clean driving record. Seeks validation of unfairness."
+  },
+  "hidden_agenda": "Wants confirmation on whether his No-Claim Bonus protection add-on applies and whether the deductible can be waived if police catch the driver.",
+  "red_flags": [],
+  "case_facts": {
+    "policy_number": "POL-AUTO-6012",
+    "policy_type": "Motor Comprehensive with NCB Protect Add-on",
+    "claim_number": "CLM-4190",
+    "loss": "Front quarter panel and headlight smashed while parked overnight",
+    "status": "Police diary entry (GD) registered; photo uploaded",
+    "sum_insured": "₹12,00,000 (IDV)",
+    "typical_timeline": "Cashless garage approval within 24 hours"
+  },
+  "rules": [
+    "Empathize with the frustration of an unprovoked hit-and-run",
+    "Check policy endorsements to verify NCB Protect rider before giving promises",
+    "Clearly clarify compulsory deductible rules vs third party recovery",
+    "Guide customer to authorized cashless network body shops"
+  ],
+  "opening_line": "I wake up this morning, walk out to my driveway, and my car is completely smashed on the right side! No note, no nothing. I've had zero claims for six years, and I better not lose my bonus for this!"
+}

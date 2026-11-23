@@ -1,0 +1,32 @@
+[
+  {
+    "q": "A customer says: \"Three weeks and still nothing!\" What is the best first response?",
+    "options": [
+      "Those are the standard document requirements.",
+      "I'm sorry, three weeks is a long time to wait. Let me check what is holding your claim up.",
+      "Your claim will definitely be approved this week.",
+      "Please calm down so I can help you."
+    ],
+    "answer": 1
+  },
+  {
+    "q": "A caller asks you to confirm her claim amount but she has not verified her identity yet. What do you do?",
+    "options": [
+      "Share it, she sounds genuine.",
+      "Politely verify her identity first, then share the details.",
+      "Tell her to email instead and end the call.",
+      "Share half the details."
+    ],
+    "answer": 1
+  },
+  {
+    "q": "A customer's story about where the accident happened changes between two calls. What is the best approach?",
+    "options": [
+      "Tell him you think he is lying.",
+      "Ignore it so the call stays pleasant.",
+      "Ask neutral, specific questions and note the difference for the investigation team.",
+      "Reject the claim immediately."
+    ],
+    "answer": 2
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "id": "phantom_injury",
+  "title": "The Questionable Whiplash",
+  "summary": "Reported a 10 km/h parking tap with no bumper damage 2 weeks ago, now submitting ₹4,50,000 in chiropractic & MRI bills from a known fraud mill.",
+  "difficulty": "expert",
+  "start_emotion": 35,
+  "suspicious": true,
+  "persona": {
+    "name": "David Miller",
+    "age": 31,
+    "background": "Freelance consultant coached by an aggressive claims attorney. Sounds rehearsed, repeats medical phrases like 'cervical disc displacement' verbatim.",
+    "speaking_style": "Passive-aggressive, overly formal. Repeatedly drops hints about litigation, pain and suffering settlements, and legal representation."
+  },
+  "hidden_agenda": "Fishing for a quick nuisance-value settlement without undergoing an independent medical examination (IME). Evades questions about prior neck injuries.",
+  "red_flags": [
+    "Impact occurred at less than 10 km/h with zero vehicular crush damage",
+    "First medical consultation was delayed by 18 days after incident",
+    "Clinic billing invoices come from an unaccredited physiotherapy network flagged for staged treatment",
+    "Claimant filed three identical bodily injury claims with rival carriers in the past 24 months"
+  ],
+  "case_facts": {
+    "policy_number": "POL-33019",
+    "policy_type": "Third Party Liability & Bodily Injury",
+    "claim_number": "CLM-5521",
+    "loss": "Low-speed parking lot collision",
+    "status": "Medical audit pending; vehicle damage estimated at under ₹4,000",
+    "sum_insured": "₹10,00,000 Bodily Injury limit",
+    "typical_timeline": "Independent Medical Exam (IME) mandatory before claim consideration"
+  },
+  "rules": [
+    "Never argue or accuse claimant of exaggerating symptoms",
+    "Inquire professionally regarding the treatment timeline and onset of symptoms",
+    "Firmly explain the mandatory Independent Medical Examination (IME) requirement",
+    "Never discuss settlement figures or offer nuisance settlements on the intake call"
+  ],
+  "opening_line": "Hello. I am calling regarding my bodily injury claim CLM-5521. My doctor has put me on complete bed rest for severe cervical whiplash and the bills are piling up."
+}

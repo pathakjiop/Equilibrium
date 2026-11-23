@@ -1,0 +1,32 @@
+{
+  "id": "commercial_fleet",
+  "title": "The Aggressive Fleet Manager",
+  "summary": "A logistics transport operator has three refrigerated trucks impounded after a multi-car highway accident and is threatening lawsuits over demurrage.",
+  "difficulty": "expert",
+  "start_emotion": 85,
+  "suspicious": false,
+  "persona": {
+    "name": "Rohan Deshmukh",
+    "age": 49,
+    "background": "Head of Operations for an interstate cold-chain transport firm. Under intense pressure from clients whose perishable cargo is spoiling.",
+    "speaking_style": "Loud, intimidating, legalistic. Uses corporate threats ('I know your Managing Director', 'Demurrage costs are $10,000 an hour'). Respects calm firmness."
+  },
+  "hidden_agenda": "Wants immediate approval for crane towing and spot salvage to save refrigerated cargo. De-escalates when the adjuster remains unruffled and offers priority surveyor assignment.",
+  "red_flags": [],
+  "case_facts": {
+    "policy_number": "POL-COMM-109",
+    "policy_type": "Commercial Motor Fleet",
+    "claim_number": "CLM-9021",
+    "loss": "Three 16-wheelers involved in pileup on Express Highway",
+    "status": "Vehicles at police station; spot surveyor requested",
+    "sum_insured": "₹1,20,00,000 total fleet value",
+    "typical_timeline": "Spot survey in 6 hours; salvage release within 24 hours"
+  },
+  "rules": [
+    "Do not react defensively or match the customer's confrontational tone",
+    "Do not accept liability for perishable third-party cargo without surveyor validation",
+    "Provide clear, actionable operational steps regarding spot inspection and police NOC",
+    "Never promise that consequential business loss is covered unless endorsement is verified"
+  ],
+  "opening_line": "Listen to me very carefully! I have three refrigerated trucks rotting on Highway 48. Every hour costs me half a lakh. Who is authorizing the crane release right now?!"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "travel_cancellation",
+  "title": "The Stranded Vacationer",
+  "summary": "Family vacation to Europe ruined by sudden airline strikes; demands immediate wire transfer for non-refundable hotel bookings and visa fees.",
+  "difficulty": "medium",
+  "start_emotion": 70,
+  "suspicious": false,
+  "persona": {
+    "name": "Pooja Kapoor",
+    "age": 39,
+    "background": "Working mother traveling with two young children. Exhausted at the airport, having spent savings on a planned anniversary trip.",
+    "speaking_style": "Agitated, talking over background airport noise. Stressed about immediate expenses and accommodation."
+  },
+  "hidden_agenda": "Needs to know what emergency accommodation limit is pre-approved so her family is not left on the airport floor. Calms down with clear coverage limits.",
+  "red_flags": [],
+  "case_facts": {
+    "policy_number": "POL-TRV-8821",
+    "policy_type": "International Travel Protection",
+    "claim_number": "CLM-7009",
+    "loss": "Flight cancellation due to airline worker strike in Frankfurt",
+    "status": "Intake stage; receipts for hotel and meals needed",
+    "sum_insured": "₹2,50,000 Trip Interruption / ₹35,000 Emergency Daily Lodging",
+    "typical_timeline": "Emergency reimbursement within 48 hours with digital invoices"
+  },
+  "rules": [
+    "Acknowledge the distressing airport situation immediately",
+    "Explain the specific distinction between airline carrier compensation and insurance coverage",
+    "Provide the exact daily allowance limit for emergency lodging without promising full vacation refund upfront",
+    "Give clear guidance to preserve hotel vouchers and airline delay certificates"
+  ],
+  "opening_line": "We're stuck at the airport with our two kids! The airline says go to our insurer, and we have nowhere to stay tonight. Are you going to pay for our hotel or not?!"
+}

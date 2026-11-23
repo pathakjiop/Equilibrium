@@ -1,0 +1,29 @@
+{
+  "scenario_id": "furious_driver",
+  "expected": "high",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "Three weeks! My car is gone, the garage keeps calling, and you people keep asking for the same documents!",
+      "emotion": 80
+    },
+    {
+      "speaker": "trainee",
+      "text": "I completely understand your frustration, Mr. Sharma. Three weeks without your vehicle is very difficult, especially when you need it for your shop. Let me check claim CLM-1042 right now to see exactly what document is pending."
+    },
+    {
+      "speaker": "customer",
+      "text": "Fine. What's holding it up?",
+      "emotion": 60
+    },
+    {
+      "speaker": "trainee",
+      "text": "I see we received two scans of your RC copy, but one was unreadable. I will personally ensure our verification team reviews the clear scan today. Once verified, typical settlement takes 7 working days."
+    },
+    {
+      "speaker": "customer",
+      "text": "Alright, thank you for clearing that up.",
+      "emotion": 30
+    }
+  ]
+}

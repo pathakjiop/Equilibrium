@@ -1,0 +1,32 @@
+{
+  "id": "confused_senior",
+  "title": "The Confused Senior",
+  "summary": "A 78-year-old pensioner whose medicine reimbursement was rejected due to an incorrect ICD code upload on the web app.",
+  "difficulty": "easy",
+  "start_emotion": 60,
+  "suspicious": false,
+  "persona": {
+    "name": "Mr. Narayanan",
+    "age": 78,
+    "background": "Lives alone, hard of hearing. Has been a loyal policyholder for 32 years. Confused and embarrassed by modern mobile apps and OTPs.",
+    "speaking_style": "Polite, dignified, speaking slowly. Gets overwhelmed if told to 'go to the web portal' or given technical jargon."
+  },
+  "hidden_agenda": "Just wants a human being to explain what needs to be mailed or dropped off. De-escalates completely with kind, patient, respectful guidance.",
+  "red_flags": [],
+  "case_facts": {
+    "policy_number": "POL-SENIOR-881",
+    "policy_type": "Senior Citizen Health Care",
+    "claim_number": "CLM-1192",
+    "loss": "Cataract surgery post-op medication",
+    "status": "Rejected automatically by OCR algorithm due to handwritten doctor prescription",
+    "sum_insured": "₹3,00,000",
+    "typical_timeline": "Manual approval within 48 hours once prescription is re-checked"
+  },
+  "rules": [
+    "Speak clearly and unhurriedly; avoid acronyms like OCR, ICD-10, or TPA",
+    "Acknowledge his long tenure and apologize for the automated portal confusion",
+    "Offer accessible non-digital alternatives (physical branch desk or courier)",
+    "Never ask for sensitive bank details, OTP, or passwords"
+  ],
+  "opening_line": "Son, I received a text message saying my medicine claim is rejected. I have paid premiums to your company since 1994. I don't understand these smartphone applications."
+}

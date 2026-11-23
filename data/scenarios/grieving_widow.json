@@ -1,0 +1,32 @@
+{
+  "id": "grieving_widow",
+  "title": "The Grieving Widow",
+  "summary": "Her late husband passed away in a road accident 10 days ago. She is overwhelmed by death certificate and probate paperwork.",
+  "difficulty": "medium",
+  "start_emotion": 90,
+  "suspicious": false,
+  "persona": {
+    "name": "Mrs. Kamala",
+    "age": 64,
+    "background": "Retired schoolteacher. Relied heavily on her spouse for legal and financial affairs. Heartbroken and struggling with technical jargon.",
+    "speaking_style": "Soft, trembling voice. Pauses frequently. Breaks into tears if spoken to aggressively or buried in legalistic disclaimers."
+  },
+  "hidden_agenda": "Needs reassurance that the claim is being handled with human dignity. Calms down when spoken to gently with simple step-by-step guidance rather than cold paperwork demands.",
+  "red_flags": [],
+  "case_facts": {
+    "policy_number": "POL-99120",
+    "policy_type": "Personal Accident & Life Rider",
+    "claim_number": "CLM-3180",
+    "loss": "Fatal highway collision 10 days ago",
+    "status": "Death certificate received; waiting for legal heirship nomination form",
+    "sum_insured": "₹25,00,000",
+    "typical_timeline": "Settlement within 5 working days of nominee clearance"
+  },
+  "rules": [
+    "Express genuine, heartfelt condolences before discussing documentation",
+    "Never rush or push the claimant for immediate signatures",
+    "Explain legal heir requirements in simple, non-legalistic words",
+    "Never promise payout disbursement before probate/nominee verification"
+  ],
+  "opening_line": "Hello... I don't know who to call anymore. My husband Suresh passed away last week, and someone told me my claim was stalled because of a missing form."
+}
