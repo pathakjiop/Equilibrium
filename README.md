@@ -1,107 +1,181 @@
-# ⚖️ Equilibrium
+# Equilibrium
 
-A flight simulator for insurance claims staff. An AI plays difficult customers (furious, grieving, evasive, suspicious). An AI coach scores empathy, accuracy, compliance and fraud awareness, and shows exactly which lines helped or hurt. Also runs as a fair, repeatable hiring assessment for calling roles.
+An AI-powered roleplay flight simulator and standardized calling assessment engine for insurance claims adjusters. An LLM agent plays challenging customer personas with dynamic emotional tracking, while deterministic code and an AI coach evaluate soft skills, compliance, and factual accuracy.
 
-**Live demo:** [Equilibrium](http://localhost:8008)
-
----
-
-## The Problem
-New claims adjusters learn from manuals, then take their first angry or grieving call live. Mistakes cost trust, money and sometimes legal trouble. There is no safe place to practice.
+**Local Server:** http://localhost:8008
 
 ---
 
-## How it works
+## Overview
+
+New claims adjusters typically transition directly from policy documentation to live customer interactions. Early mistakes in high-stress conversations damage policyholder trust, incur regulatory penalties, and cause legal liabilities. Equilibrium provides a deterministic training and assessment sandbox to practice de-escalation, compliance enforcement, and fraud recognition before taking live policyholder calls.
+
+---
+
+## System Architecture
+
+Equilibrium divides responsibilities between deterministic code and LLM evaluation:
+- The LLM judges subjective communication (tone, sincerity, factual consistency against case notes).
+- Code computes hard metrics (emotional differentials, guardrail penalties, composite scores).
 
 ```
-Trainee picks scenario
+Trainee selects scenario
         |
-Scenario JSON  ->  Customer agent  <-->  Trainee (text or voice UI)
-(persona, facts,        |                     |
- rules, red flags)      +-- mood per turn ----+
+Scenario JSON  ->  Customer Agent (LLM) <--> Trainee (Voice / Text UI)
+(persona, facts,        |                         |
+ rules, red flags)      +--- mood per turn (0-100)+
                                 |
-                      End call / time up
+                      End call / time limit reached
                                 |
-        +-----------------------+----------------------+
-        |                       |                      |
- Guardrail scan          Coach agent (LLM)      De-escalation calc
- (regex rules)           (rubric + transcript)  (mood trail)
-        +-----------------------+----------------------+
+        +-----------------------+-----------------------+
+        |                       |                       |
+ Guardrail Scanner       Coach Agent (LLM)       De-escalation Engine
+ (deterministic regex)   (rubric + transcript)   (mood delta calculation)
+        +-----------------------+-----------------------+
                                 |
-                        Scoring engine
+                         Scoring Engine
                                 |
               +-----------------+-----------------+
-         Practice: scorecard          Hiring: save to SQLite
-         shown to trainee             -> recruiter dashboard
+              |                                   |
+       Practice Mode:                      Hiring Mode:
+   Scorecard & Coaching Tips           Recruiter Dashboard & Audit
 ```
 
-| Agent / component | Role |
-|---|---|
-| **Customer agent** | Plays the persona and updates its mood (0-100) each turn |
-| **Guardrail checker** | Rule-based catch for promised payouts, credential requests, pressure, rude phrases, prompt injection |
-| **Coach agent** | Scores soft skills against a written rubric (`data/rubric.yaml`), quoting evidence |
-| **Scoring engine** | Computes de-escalation from the mood trail and calculates final score |
+### Components
 
-**Design choice:** The LLM judges soft skills (tone, empathy); code computes hard numbers (mood shifts, rule penalties, de-escalation).
-
----
-
-## Features
-- **Practice Mode**: 2+ scenarios with hidden agendas and red flags (easy to add more as JSON). Live customer mood meter. Detailed scorecard with quoted moments and suggested better lines.
-- **Hiring Mode**: Standardized scenario, 1 attempt per email, turn/time limits, anti-cheating injection detection, and a secure recruiter dashboard.
-- **Voice call simulation**: Caller replies are read aloud. Trainees can dictate a reply, review the transcript, then send it. Typed replies remain available. Voice controls are shared by practice and hiring calls.
-- **Call Assistant & Replay Foundation**: Real-time compliance scans and transcript history for post-call deconstruction.
-
-Voice uses the browser's speech synthesis for caller playback and `react-speech-recognition` for microphone input. Select **Use microphone** and speak. Recognized words appear in the reply box for review before sending; select **Stop listening** to finish early. Voice input does not use the Gemini API or the backend. It requires a browser that supports the Web Speech API, microphone permission, and a secure context (or localhost). The app shows an availability or permission message when voice input cannot start. The browser may use its own speech service; only the resulting text is sent to the roleplay backend when you select **Send**.
-
-The React app lives in `frontend/src`. Shared call audio logic is in `frontend/src/hooks/useCallVoice.js`, and the controls are in `frontend/src/components/CallVoiceControls.jsx`. The FastAPI entry point is `server.py`; roleplay, scoring and storage are in `dojo/`. The older Streamlit interface remains in `app.py` and `pages/`.
-
-To limit model costs, customer replies send at most the latest 12 turns. The full transcript is still retained for scoring and replay. The frontend loads each section when opened.
+| Component | Implementation | Responsibility |
+|---|---|---|
+| **Customer Agent** | Gemini 2.5 Flash (`v1beta`) | Roleplays customer persona; updates emotional state (0-100) each turn. |
+| **Guardrail Scanner** | Deterministic Regex | Real-time detection of promised payouts, credential requests, pressure, insults, and prompt injection. |
+| **Coach Agent** | Gemini 2.5 Flash (`v1beta`) | Evaluates empathy, accuracy, and compliance against a written rubric (`data/rubric.yaml`) with quoted evidence. |
+| **De-escalation Engine** | Deterministic Code | Computes emotional reduction ratio from caller mood trajectory. |
+| **Scoring Engine** | Deterministic Code | Deducts penalties for guardrail breaches and calculates composite score. |
 
 ---
 
-## Quick start
+## Core Capabilities
 
-### 1. Set up virtual environment and install backend
+### 1. Practice Mode
+- **Scenario Library**: 10 pre-configured claims scenarios spanning Easy, Medium, and Expert difficulties (genuine disputes, catastrophic losses, and Special Investigation Unit fraud cases).
+- **Scenario Studio**: Create custom scenarios manually or generate complete case files using AI from a single prompt.
+- **Dynamic Mood Meter**: Visual real-time gauge displaying customer emotional volatility (Furious, Agitated, Uneasy, Calmer).
+- **In-Call Copilot**: Real-time warnings when typed messages violate compliance guardrails before sending.
+- **Evaluation Scorecard**: Detailed rating with dimension breakdowns, key strengths, improvement areas, and quoted key moments with recommended phrasing.
+
+### 2. Hiring Assessment Mode
+- **Standardized Benchmark**: All candidates face the identical scenario (`HIRING_SCENARIO_ID`).
+- **Single Attempt**: Verification by candidate email to prevent retries.
+- **Turn and Time Constraints**: Strict turn limits and countdown timers.
+- **Situational Judgement Screening**: Multiple-choice evaluation prior to the live call.
+- **Recruiter Dashboard**: Password-protected candidate leaderboard with full transcript audit and score breakdowns.
+
+### 3. Voice Simulation
+- Integrated Web Speech API for caller audio playback and microphone dictation.
+- Trainees can review transcribed speech before sending.
+
+### 4. Call Replay & Audit
+- Turn-by-turn scrubber to inspect past practice and candidate sessions.
+- Displays caller stress trajectory and conversational inflection points.
+
+---
+
+## Quick Start
+
+### Prerequisites
+- Python 3.10+
+- Node.js 18+ and npm
+- Google Gemini API key
+
+### 1. Backend Setup
+
 ```bash
+# Set up virtual environment
 python -m venv .venv
-# On Windows:
+
+# Activate environment (Windows)
 .venv\Scripts\activate
-# On Linux/macOS:
+# Activate environment (macOS/Linux)
 # source .venv/bin/activate
 
+# Install dependencies
 pip install -r requirements.txt
-cp .env.example .env     # add your GEMINI_API_KEY and set DOJO_RECRUITER_PASSWORD
+
+# Configure environment variables
+cp .env.example .env
+# Edit .env and supply GEMINI_API_KEY and DOJO_RECRUITER_PASSWORD
 ```
 
-### 2. Start the FastAPI Backend
+### 2. Start Services
+
+**FastAPI Backend Server:**
 ```bash
 uvicorn server:app --reload --port 8008
 ```
 
-### 3. Start the Vite + React Frontend
-In a separate terminal:
+**Vite + React Frontend (Development):**
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Open **http://localhost:5173** to view the app with live hot reloading (or access **http://localhost:8008** for the unified production server).
 
-### Run checks
+The application is accessible at:
+- **Development UI:** http://localhost:5173
+- **Unified Production Server:** http://localhost:8008
+
+### 3. Run Verification Tests
+
 ```bash
+# Run backend pytest suite
 pytest -q
+
+# Run frontend lint and production build
 cd frontend
 npm run lint
 npm run build
 ```
 
-The Dockerfile builds the React app and serves it through FastAPI on port 8008.
+---
+
+## Project Structure
+
+```
+equilibrium/
+├── server.py                   # FastAPI application entry point
+├── app.py                      # Streamlit application
+├── requirements.txt            # Python dependencies
+├── pytest.ini                  # Test runner configuration
+├── Dockerfile                  # Container definition
+├── dojo/
+│   ├── config.py               # Application configuration
+│   ├── llm.py                  # Gemini API wrapper (v1beta)
+│   ├── scenarios.py            # Scenario loader & validator
+│   ├── customer_agent.py       # Customer persona roleplay agent
+│   ├── guardrails.py           # Deterministic regex scanner
+│   ├── coach_agent.py          # LLM rubric evaluator
+│   ├── scoring.py              # De-escalation & composite engine
+│   └── storage.py              # SQLite session persistence
+├── data/
+│   ├── rubric.yaml             # Evaluation dimensions and weights
+│   ├── mcq.json                # Situational judgement questions
+│   └── scenarios/              # 10 JSON claims scenario definitions
+├── frontend/
+│   ├── src/
+│   │   ├── components/         # React views (Practice, Hiring, Dashboard, Replay)
+│   │   ├── hooks/              # Audio & speech recognition hooks
+│   │   ├── index.css           # Vercel Geist design tokens
+│   │   └── api.js              # REST client
+│   └── vite.config.js          # Vite configuration and reverse proxy
+└── tests/
+    ├── test_guardrails.py      # Regex guardrail test cases
+    ├── test_scoring.py         # Scoring and de-escalation test cases
+    └── test_scenarios.py       # Scenario schema validation
+```
 
 ---
 
-## Responsible AI
-- Synthetic data only. No real customer information.
-- AI scores are a decision aid, never the sole basis for hiring.
-- Candidates are told an AI scores the test. Spelling and fluency are not scored.
-- Known limits: the AI coach can misjudge; speech transcription captures words but does not score spoken delivery.
+## Responsible AI Guidelines
+
+- **Synthetic Data**: All policy numbers, customer names, and claim details are entirely synthetic.
+- **Decision Support**: Assessment scores serve as an advisory input for human recruiters and training managers, not as an automated employment decision.
+- **Fair Scoring**: The AI coach strictly evaluates conversational content, compliance, and accuracy. Dialects, spelling, and typing speed are excluded from scoring.
