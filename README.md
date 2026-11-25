@@ -1,5 +1,9 @@
 # Equilibrium
 
+<p align="center">
+  <img src="docs/hero-card.svg" alt="Equilibrium Claims Flight Simulator" width="100%" />
+</p>
+
 An AI-powered roleplay flight simulator and standardized calling assessment engine for insurance claims adjusters. An LLM agent plays challenging customer personas with dynamic emotional tracking, while deterministic code and an AI coach evaluate soft skills, compliance, and factual accuracy.
 
 **Local Server:** http://localhost:8008

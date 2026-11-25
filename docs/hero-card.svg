@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap');
+
+      .bg {
+        fill: #fafafa;
+      }
+      .mono-eyebrow {
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        fill: #6b7280;
+      }
+      .brand-title {
+        font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+        font-size: 80px;
+        font-weight: 400;
+        letter-spacing: -2px;
+        fill: #111827;
+      }
+      .brand-italic {
+        font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+        font-style: italic;
+        fill: #2563eb;
+      }
+      .tagline {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 400;
+        fill: #4b5563;
+      }
+      .spec-label {
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 10.5px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        fill: #1f2937;
+      }
+      .axis-line {
+        stroke: #e5e7eb;
+        stroke-width: 1;
+      }
+      .wave-damped {
+        fill: none;
+        stroke: #111827;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .wave-guide {
+        fill: none;
+        stroke: #2563eb;
+        stroke-width: 1.5;
+        stroke-dasharray: 3 3;
+      }
+      .node-circle {
+        fill: #ffffff;
+        stroke: #2563eb;
+        stroke-width: 2;
+      }
+    </style>
+  </defs>
+
+  <!-- Clean Off-White Card Container with 20px Rounded Corners -->
+  <rect x="1" y="1" width="958" height="398" rx="20" ry="20" class="bg" stroke="#e5e7eb" stroke-width="1.5" />
+
+  <!-- LEFT SECTION: Editorial Brand & Typographic Hierarchy -->
+  <g transform="translate(56, 52)">
+    <!-- 1. Monospace Eyebrow with Blue Square Marker -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="3" width="8" height="8" rx="2" fill="#2563eb" />
+      <text x="18" y="11" class="mono-eyebrow">CLAIMS FLIGHT SIMULATOR // VERIFIED ROLEPLAY</text>
+    </g>
+
+    <!-- 2. Hero Headline -->
+    <text x="0" y="88" class="brand-title">
+      Equilib<tspan class="brand-italic">ri</tspan>um
+    </text>
+
+    <!-- 3. Prose Concept Description -->
+    <text x="0" y="132" class="tagline">A flight simulator for insurance claims adjusters. Practice</text>
+    <text x="0" y="156" class="tagline">de-escalating high-stress policyholder conversations with</text>
+    <text x="0" y="180" class="tagline">deterministic guardrails and evidence-backed AI coaching.</text>
+
+    <!-- 4. Divider Line -->
+    <line x1="0" y1="228" x2="480" y2="228" stroke="#e5e7eb" stroke-width="1" />
+
+    <!-- 5. Technical Spec Metadata Pills -->
+    <g transform="translate(0, 248)">
+      <g transform="translate(0, 0)">
+        <rect width="138" height="26" rx="5" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" />
+        <text x="12" y="17" class="spec-label">GEMINI 2.5 FLASH</text>
+      </g>
+      <g transform="translate(148, 0)">
+        <rect width="130" height="26" rx="5" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" />
+        <text x="12" y="17" class="spec-label">10 SCENARIOS</text>
+      </g>
+      <g transform="translate(288, 0)">
+        <rect width="168" height="26" rx="5" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" />
+        <text x="12" y="17" class="spec-label">REGEX GUARDRAILS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT SECTION: Abstract Mathematical "Equilibrium" Graphic -->
+  <!-- Represents chaotic volatile emotional waves dampening into perfect equilibrium balance -->
+  <g transform="translate(560, 52)">
+    <!-- Graphic Container Box -->
+    <rect x="0" y="0" width="344" height="296" rx="14" ry="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" />
+
+    <!-- Technical Header of the Diagram -->
+    <text x="24" y="32" class="mono-eyebrow" font-size="9.5">DE-ESCALATION DYNAMICS</text>
+    <text x="250" y="32" class="mono-eyebrow" font-size="9.5" fill="#2563eb">STATE: STABLE</text>
+    <line x1="24" y1="44" x2="320" y2="44" stroke="#f3f4f6" stroke-width="1" />
+
+    <!-- Coordinate Grid & Datum Center Line -->
+    <g transform="translate(24, 150)">
+      <!-- Fine background grid lines -->
+      <line x1="0" y1="-70" x2="296" y2="-70" stroke="#f3f4f6" stroke-width="1" stroke-dasharray="2 3" />
+      <line x1="0" y1="70" x2="296" y2="70" stroke="#f3f4f6" stroke-width="1" stroke-dasharray="2 3" />
+      <line x1="0" y1="0" x2="296" y2="0" class="axis-line" />
+
+      <!-- Convergence Target Envelopes (subtle guide lines) -->
+      <path d="M 0 -80 Q 148 -15 296 0" class="wave-guide" />
+      <path d="M 0 80 Q 148 15 296 0" class="wave-guide" />
+
+      <!-- The Damped Sine Wave (Emotional Volatility resolving to 0 Equilibrium) -->
+      <!-- Formula concept: e^(-x) * sin(kx) -->
+      <path d="M 0 0 
+               C 18 -92, 38 -92, 54 0 
+               C 70 70, 92 70, 108 0 
+               C 124 -50, 146 -50, 162 0 
+               C 178 30, 200 30, 216 0 
+               C 230 -16, 252 -16, 268 0 
+               L 296 0" 
+            class="wave-damped" />
+
+      <!-- Key Observation Data Points on the Curve -->
+      <circle cx="28" cy="-68" r="3.5" class="node-circle" />
+      <text x="28" y="-78" font-family="'JetBrains Mono', monospace" font-size="9" fill="#ef4444" text-anchor="middle">MOOD: 95</text>
+
+      <circle cx="135" cy="-35" r="3.5" class="node-circle" stroke="#f59e0b" />
+      <text x="135" y="-45" font-family="'JetBrains Mono', monospace" font-size="9" fill="#d97706" text-anchor="middle">MOOD: 55</text>
+
+      <circle cx="296" cy="0" r="4.5" class="node-circle" stroke="#2563eb" fill="#2563eb" />
+      <text x="296" y="-12" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2563eb" text-anchor="end" font-weight="600">EQUILIBRIUM: 15</text>
+    </g>
+
+    <!-- Bottom Technical Legend of Diagram -->
+    <g transform="translate(24, 264)">
+      <line x1="0" y1="0" x2="296" y2="0" stroke="#f3f4f6" stroke-width="1" />
+      <text x="0" y="18" class="mono-eyebrow" font-size="9">VOLATILITY (TURNS 1-8)</text>
+      <text x="296" y="18" class="mono-eyebrow" font-size="9" text-anchor="end">&#916; MOOD RESOLVED</text>
+    </g>
+  </g>
+</svg>
